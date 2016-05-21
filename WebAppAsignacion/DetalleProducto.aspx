@@ -66,16 +66,7 @@
             <td style="text-align: center">
                 <asp:Label ID="lblAreax" runat="server"></asp:Label>
             </td>
-        </tr>
-
-        <tr>
-            <td style="text-align: center">
-                <asp:Label ID="lblPrecio" runat="server" Text="PRECIO:"></asp:Label>
-            </td>
-            <td style="text-align: center">
-                <asp:Label ID="lblPreciox" runat="server"></asp:Label>
-            </td>
-        </tr>
+        </tr>        
 
         <tr>
             <td style="text-align: center">

@@ -33,7 +33,6 @@ namespace WebAppAsignacion
             lblDescripcionx.Text = Convert.ToString(equipo.Descripcion);
             lblMarcax.Text = Convert.ToString(equipo.Marca);
             lblAreax.Text = Convert.ToString(equipo.Area);
-            lblPreciox.Text = Convert.ToString(equipo.Precio);
             lblFechax.Text = Convert.ToString(equipo.Fecha);
             lblEstadox.Text = Convert.ToString(equipo.Estado);
 
