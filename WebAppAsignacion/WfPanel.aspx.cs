@@ -16,7 +16,14 @@ namespace WebAppAsignacion
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Mantenimiento.aspx?");  
+            Response.Write("<script language=javascript>alert('Trabajando!!!!!!');</script>");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            
+            //Button2.Attributes.Add("onclick", "return confirm('¿desea ir a estos datos?')");
+            Response.Redirect("Mantenimiento.aspx?"); 
         }
     }
 }

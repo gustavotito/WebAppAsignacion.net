@@ -30,7 +30,7 @@
 
         <tr>
             <td style="text-align: center">
-            <asp:GridView ID="gvdatos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#333333" 
+            <asp:GridView ID="gvEquipos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#333333" 
                                                         BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Height="230px" 
                                                         Width="850px" style="text-align: center; margin-left: 0px;" AllowPaging="True" PageSize="5" OnPageIndexChanging="Paginar">
                 <Columns>

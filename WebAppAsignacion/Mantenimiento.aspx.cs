@@ -19,16 +19,16 @@ namespace WebAppAsignacion
         {
             ServicioEquipos.EquipoServiceClient proxy = new ServicioEquipos.EquipoServiceClient();
 
-            gvdatos.DataSource = proxy.ListarEquipos();
+            gvEquipos.DataSource = proxy.ListarEquipos();
 
-            gvdatos.DataBind();
+            gvEquipos.DataBind();
 
             proxy = null;
         }
 
         protected void Paginar(object sender, GridViewPageEventArgs e)
         {
-            gvdatos.PageIndex = e.NewPageIndex;
+            gvEquipos.PageIndex = e.NewPageIndex;
             listarEquipos();
         }
 
