@@ -32,10 +32,10 @@ namespace WebAppAsignacion.ServicioEquipos {
         private string EstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime FechaField;
+        private string FechaRegField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
+        private string IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdAreaField;
@@ -44,13 +44,10 @@ namespace WebAppAsignacion.ServicioEquipos {
         private int IdEstadoField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MarcaField;
+        private string ModeloField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string NombreField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private decimal PrecioField;
+        private string TipoField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -102,25 +99,25 @@ namespace WebAppAsignacion.ServicioEquipos {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime Fecha {
+        public string FechaReg {
             get {
-                return this.FechaField;
+                return this.FechaRegField;
             }
             set {
-                if ((this.FechaField.Equals(value) != true)) {
-                    this.FechaField = value;
-                    this.RaisePropertyChanged("Fecha");
+                if ((object.ReferenceEquals(this.FechaRegField, value) != true)) {
+                    this.FechaRegField = value;
+                    this.RaisePropertyChanged("FechaReg");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
+        public string Id {
             get {
                 return this.IdField;
             }
             set {
-                if ((this.IdField.Equals(value) != true)) {
+                if ((object.ReferenceEquals(this.IdField, value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
                 }
@@ -154,40 +151,27 @@ namespace WebAppAsignacion.ServicioEquipos {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Marca {
+        public string Modelo {
             get {
-                return this.MarcaField;
+                return this.ModeloField;
             }
             set {
-                if ((object.ReferenceEquals(this.MarcaField, value) != true)) {
-                    this.MarcaField = value;
-                    this.RaisePropertyChanged("Marca");
+                if ((object.ReferenceEquals(this.ModeloField, value) != true)) {
+                    this.ModeloField = value;
+                    this.RaisePropertyChanged("Modelo");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Nombre {
+        public string Tipo {
             get {
-                return this.NombreField;
+                return this.TipoField;
             }
             set {
-                if ((object.ReferenceEquals(this.NombreField, value) != true)) {
-                    this.NombreField = value;
-                    this.RaisePropertyChanged("Nombre");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Precio {
-            get {
-                return this.PrecioField;
-            }
-            set {
-                if ((this.PrecioField.Equals(value) != true)) {
-                    this.PrecioField = value;
-                    this.RaisePropertyChanged("Precio");
+                if ((object.ReferenceEquals(this.TipoField, value) != true)) {
+                    this.TipoField = value;
+                    this.RaisePropertyChanged("Tipo");
                 }
             }
         }
@@ -213,10 +197,10 @@ namespace WebAppAsignacion.ServicioEquipos {
         System.Threading.Tasks.Task<WebAppAsignacion.ServicioEquipos.Equipos[]> ListarEquiposAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEquipoService/ObtenerEquipos", ReplyAction="http://tempuri.org/IEquipoService/ObtenerEquiposResponse")]
-        WebAppAsignacion.ServicioEquipos.Equipos ObtenerEquipos(int id);
+        WebAppAsignacion.ServicioEquipos.Equipos ObtenerEquipos(string id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IEquipoService/ObtenerEquipos", ReplyAction="http://tempuri.org/IEquipoService/ObtenerEquiposResponse")]
-        System.Threading.Tasks.Task<WebAppAsignacion.ServicioEquipos.Equipos> ObtenerEquiposAsync(int id);
+        System.Threading.Tasks.Task<WebAppAsignacion.ServicioEquipos.Equipos> ObtenerEquiposAsync(string id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -254,11 +238,11 @@ namespace WebAppAsignacion.ServicioEquipos {
             return base.Channel.ListarEquiposAsync();
         }
         
-        public WebAppAsignacion.ServicioEquipos.Equipos ObtenerEquipos(int id) {
+        public WebAppAsignacion.ServicioEquipos.Equipos ObtenerEquipos(string id) {
             return base.Channel.ObtenerEquipos(id);
         }
         
-        public System.Threading.Tasks.Task<WebAppAsignacion.ServicioEquipos.Equipos> ObtenerEquiposAsync(int id) {
+        public System.Threading.Tasks.Task<WebAppAsignacion.ServicioEquipos.Equipos> ObtenerEquiposAsync(string id) {
             return base.Channel.ObtenerEquiposAsync(id);
         }
     }

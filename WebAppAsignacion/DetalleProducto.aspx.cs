@@ -11,7 +11,7 @@ namespace WebAppAsignacion
     public partial class DetalleProducto : System.Web.UI.Page
     {
         public static string str_equipo;
-        public static int str_id;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             cargarEquiposKey();
@@ -21,19 +21,18 @@ namespace WebAppAsignacion
         void cargarEquiposKey()
         {
             str_equipo = Request.QueryString["id"];
-            str_id = Convert.ToInt32(str_equipo);
 
             ServicioEquipos.EquipoServiceClient proxy = new ServicioEquipos.EquipoServiceClient();
 
-            ServicioEquipos.Equipos equipo = proxy.ObtenerEquipos(str_id);
+            ServicioEquipos.Equipos equipo = proxy.ObtenerEquipos(str_equipo);
 
 
             lblCodigox.Text = Convert.ToString(equipo.Id);
-            lblNombrex.Text = Convert.ToString(equipo.Nombre);
+            lblNombrex.Text = Convert.ToString(equipo.Tipo);
             lblDescripcionx.Text = Convert.ToString(equipo.Descripcion);
-            lblMarcax.Text = Convert.ToString(equipo.Marca);
+            lblMarcax.Text = Convert.ToString(equipo.Modelo);
             lblAreax.Text = Convert.ToString(equipo.Area);
-            lblFechax.Text = Convert.ToString(equipo.Fecha);
+            lblFechax.Text = Convert.ToString(equipo.FechaReg);
             lblEstadox.Text = Convert.ToString(equipo.Estado);
 
             proxy = null;

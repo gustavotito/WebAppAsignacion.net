@@ -34,11 +34,11 @@
                                                         BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Height="230px" 
                                                         Width="850px" style="text-align: center; margin-left: 0px;" AllowPaging="True" PageSize="5" OnPageIndexChanging="Paginar">
                 <Columns>
-                    <asp:BoundField DataField="Id" HeaderText="CODIGO" />
-                    <asp:BoundField DataField="Nombre" HeaderText="NOMBRE" />
-                    <asp:BoundField DataField="Marca" HeaderText="MARCA" />
+                    <asp:BoundField DataField="Id" HeaderText="NRO SERIE" />
+                    <asp:BoundField DataField="Tipo" HeaderText="TIPO" />
+                    <asp:BoundField DataField="Modelo" HeaderText="MODELO" />
                     <asp:BoundField DataField="Estado" HeaderText="ESTADO" />
-                    <asp:BoundField DataField="Fecha" HeaderText="FECHA REGISTRO" />
+                    <asp:BoundField DataField="FechaReg" HeaderText="FECHA REGISTRO" />
                     <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="ModificarProducto.aspx?id={0}" HeaderText="MODIFICAR" Text="Modificar" />
                     <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="EliminarProducto.aspx?id={0}" HeaderText="ELIMINAR" Text="Eliminar" />
                     <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="DetalleProducto.aspx?id={0}" HeaderText="DETALLE" Text="Detalle" />
