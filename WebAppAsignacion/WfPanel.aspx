@@ -13,7 +13,7 @@
         
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Asignar PC" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Solicitar PC" />
         <br />
         <br />
         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Mantenimiento PC" />

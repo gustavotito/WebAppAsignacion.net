@@ -59,6 +59,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Service References\ServicioColaborador\ColaboradorService.wsdl" />
+    <None Include="Service References\ServicioColaborador\ColaboradorService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioColaborador\ColaboradorService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioColaborador\ColaboradorService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServicioColaborador\WebAppAsignacion.ServicioColaborador.Colaborador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Service References\ServicioEquipos\EquipoService.wsdl" />
     <None Include="Service References\ServicioEquipos\EquipoService.xsd">
       <SubType>Designer</SubType>
@@ -86,6 +99,13 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Mantenimiento.aspx" />
+    <None Include="Service References\ServicioColaborador\configuration91.svcinfo" />
+    <None Include="Service References\ServicioColaborador\configuration.svcinfo" />
+    <None Include="Service References\ServicioColaborador\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Solicitud.aspx" />
     <Content Include="Web.config" />
     <Content Include="WfPanel.aspx" />
     <Content Include="Service References\ServicioEquipos\WebAppAsignacion.ServicioEquipos.Equipos.datasource">
@@ -111,10 +131,22 @@
       <DependentUpon>Mantenimiento.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServicioColaborador\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServicioEquipos\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitud.aspx.cs">
+      <DependentUpon>Solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitud.aspx.designer.cs">
+      <DependentUpon>Solicitud.aspx</DependentUpon>
     </Compile>
     <Compile Include="WfPanel.aspx.cs">
       <DependentUpon>WfPanel.aspx</DependentUpon>
@@ -132,6 +164,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServicioColaborador\" />
     <WCFMetadataStorage Include="Service References\ServicioEquipos\" />
   </ItemGroup>
   <PropertyGroup>

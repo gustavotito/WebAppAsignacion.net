@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ColaboradorService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://serviciocolaborador.apphb.com/ColaboradorService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://serviciocolaborador.apphb.com/ColaboradorService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://serviciocolaborador.apphb.com/ColaboradorService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServicioColaborador.Dominio" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IColaboradorService_ListarColaborador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarColaborador" />
+  </wsdl:message>
+  <wsdl:message name="IColaboradorService_ListarColaborador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarColaboradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IColaboradorService_ObtenerColaborador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerColaborador" />
+  </wsdl:message>
+  <wsdl:message name="IColaboradorService_ObtenerColaborador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerColaboradorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IColaboradorService_ListarColaboradorXPendiente_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListarColaboradorXPendiente" />
+  </wsdl:message>
+  <wsdl:message name="IColaboradorService_ListarColaboradorXPendiente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListarColaboradorXPendienteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IColaboradorService">
+    <wsdl:operation name="ListarColaborador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IColaboradorService/ListarColaborador" message="tns:IColaboradorService_ListarColaborador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IColaboradorService/ListarColaboradorResponse" message="tns:IColaboradorService_ListarColaborador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerColaborador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IColaboradorService/ObtenerColaborador" message="tns:IColaboradorService_ObtenerColaborador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IColaboradorService/ObtenerColaboradorResponse" message="tns:IColaboradorService_ObtenerColaborador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListarColaboradorXPendiente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IColaboradorService/ListarColaboradorXPendiente" message="tns:IColaboradorService_ListarColaboradorXPendiente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IColaboradorService/ListarColaboradorXPendienteResponse" message="tns:IColaboradorService_ListarColaboradorXPendiente_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IColaboradorService" type="tns:IColaboradorService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarColaborador">
+      <soap:operation soapAction="http://tempuri.org/IColaboradorService/ListarColaborador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerColaborador">
+      <soap:operation soapAction="http://tempuri.org/IColaboradorService/ObtenerColaborador" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListarColaboradorXPendiente">
+      <soap:operation soapAction="http://tempuri.org/IColaboradorService/ListarColaboradorXPendiente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ColaboradorService">
+    <wsdl:port name="BasicHttpBinding_IColaboradorService" binding="tns:BasicHttpBinding_IColaboradorService">
+      <soap:address location="http://serviciocolaborador.apphb.com/ColaboradorService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

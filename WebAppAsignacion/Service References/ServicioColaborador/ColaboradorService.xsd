@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://serviciocolaborador.apphb.com/ColaboradorService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServicioColaborador.Dominio" />
+  <xs:element name="ListarColaborador">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarColaboradorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ServicioColaborador.Dominio" minOccurs="0" name="ListarColaboradorResult" nillable="true" type="q1:ArrayOfColaborador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerColaborador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerColaboradorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ServicioColaborador.Dominio" minOccurs="0" name="ObtenerColaboradorResult" nillable="true" type="q2:Colaborador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarColaboradorXPendiente">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarColaboradorXPendienteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ServicioColaborador.Dominio" minOccurs="0" name="ListarColaboradorXPendienteResult" nillable="true" type="q3:ArrayOfColaborador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
