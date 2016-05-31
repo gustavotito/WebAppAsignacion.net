@@ -33,6 +33,8 @@ namespace WebAppAsignacion
 
             if (str_colaborador != null)
             {
+                ServicioColaborador.ColaboradorServiceClient proxy = new ServicioColaborador.ColaboradorServiceClient();
+                ServicioColaborador.Colaborador colaborador= proxy.ObtenerColaborador(Convert.ToInt32(str_colaborador));
                 Response.Write("<script language=javascript>alert('Registrar!!!!!!');</script>");
                 str_colaborador = null;
             }
