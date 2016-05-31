@@ -37,11 +37,10 @@ namespace WebAppAsignacion
                 ServicioColaborador.Colaborador colaborador= proxy.ObtenerColaborador(Convert.ToInt32(str_colaborador));
                 registrarSolicitud(colaborador);
                 actualizarColaborador(colaborador);
-
+                colaborador = null;
+                Request.QueryString["id"] = null;
                 str_colaborador = null;
-            }
-            
-            
+            }                        
         }
 
         void registrarSolicitud(ServicioColaborador.Colaborador colaborador)
