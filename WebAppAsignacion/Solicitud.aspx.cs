@@ -11,6 +11,7 @@ namespace WebAppAsignacion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            verificarColaboradorKey();
             listarColaboradorXPendiente();
         }
 
@@ -23,6 +24,20 @@ namespace WebAppAsignacion
             gvColaborador.DataBind();
 
             proxy = null;
+        }
+
+        void verificarColaboradorKey()
+        {
+            string str_colaborador = null;
+            str_colaborador = Request.QueryString["id"];
+
+            if (str_colaborador != null)
+            {
+                Response.Write("<script language=javascript>alert('Registrar!!!!!!');</script>");
+                str_colaborador = null;
+            }
+            
+            
         }
 
         protected void Paginar(object sender, GridViewPageEventArgs e)

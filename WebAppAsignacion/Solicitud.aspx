@@ -35,7 +35,7 @@
 <asp:BoundField DataField="Cargo" HeaderText="CARGO"></asp:BoundField>
                     <asp:BoundField DataField="Area" HeaderText="AREA" />
                     <asp:BoundField DataField="Estado" HeaderText="ESTADO" />
-                    <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="DetalleProducto.aspx?id={0}" HeaderText="SOLICITAR" Text="Solicitar" />
+                    <asp:HyperLinkField DataNavigateUrlFields="Id" DataNavigateUrlFormatString="Solicitud.aspx?id={0}" HeaderText="SOLICITAR" Text="Solicitar" />
                 </Columns>
             <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
             <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
