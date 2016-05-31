@@ -69,6 +69,7 @@
     <None Include="Service References\ServicioColaborador\ColaboradorService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Asignacion.aspx" />
     <Content Include="Service References\ServicioColaborador\WebAppAsignacion.ServicioColaborador.Colaborador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -113,6 +114,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asignacion.aspx.cs">
+      <DependentUpon>Asignacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asignacion.aspx.designer.cs">
+      <DependentUpon>Asignacion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DetalleProducto.aspx.cs">
       <DependentUpon>DetalleProducto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
