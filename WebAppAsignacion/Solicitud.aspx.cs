@@ -38,7 +38,6 @@ namespace WebAppAsignacion
                 registrarSolicitud(colaborador);
                 actualizarColaborador(colaborador);
                 colaborador = null;
-                Request.QueryString["id"] = null;
                 str_colaborador = null;
             }                        
         }
