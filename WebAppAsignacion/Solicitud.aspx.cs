@@ -49,7 +49,7 @@ namespace WebAppAsignacion
             try
             {
                 System.Data.SqlClient.SqlConnection sqlConnectionR = new System.Data.SqlClient.SqlConnection("Data Source=305a4753-766f-4c06-b100-a60c0046e39d.sqlserver.sequelizer.com;Database=db305a4753766f4c06b100a60c0046e39d;Initial Catalog=db305a4753766f4c06b100a60c0046e39d;User Id=oytjmyrazbvivilj; Password=ToLz4HuFLd3g7XqckzCHPQc6QPYDsgzupYqpUqQ8KpTzdHcfTXjyZZNdkPSnSYnE");
-                DateTime date = new DateTime();
+                DateTime date = DateTime.Now;
                 int id_colaborador = Convert.ToInt32(colaborador.Id);
                 string s_nombres = Convert.ToString(colaborador.Nombres);
                 string s_apellidos = Convert.ToString(colaborador.Apellidos);
@@ -67,7 +67,7 @@ namespace WebAppAsignacion
             }
             catch
             {
-                Response.Write("<script language=javascript>alert('Error al intentar crear solicitud!!!!!!');</script>");
+                Response.Write("<script language=javascript>alert('Error al intentar crear Solicitud!!!!!!');</script>");
             }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
         }
@@ -86,11 +86,10 @@ namespace WebAppAsignacion
                 sqlConnectionR.Open();
                 cmd.ExecuteNonQuery();
                 sqlConnectionR.Close();
-                Response.Write("<script language=javascript>alert('Se ha creado la solicitud exitosamente');</script>");
             }
             catch
             {
-                Response.Write("<script language=javascript>alert('Error al intentar crear solicitud!!!!!!');</script>");
+                Response.Write("<script language=javascript>alert('Error al intentar actualizar Colaborador!!!!!!');</script>");
             }
 
         }
