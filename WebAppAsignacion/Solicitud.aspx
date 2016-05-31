@@ -45,6 +45,9 @@
             <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
             <SortedDescendingCellStyle BackColor="#E5E5E5" />
             <SortedDescendingHeaderStyle BackColor="#242121" />
+            <EmptyDataTemplate>
+            <asp:Label ID="Label1" runat="server" Text="No se ha encontrado ninguna dato en los registros."/>
+            </EmptyDataTemplate>
             </asp:GridView>                
             </td>
         </tr>

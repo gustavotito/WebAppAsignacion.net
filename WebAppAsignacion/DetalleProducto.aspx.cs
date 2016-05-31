@@ -20,22 +20,29 @@ namespace WebAppAsignacion
 
         void cargarEquiposKey()
         {
-            str_equipo = Request.QueryString["id"];
+            try
+            {
+                str_equipo = Request.QueryString["id"];
 
-            ServicioEquipos.EquipoServiceClient proxy = new ServicioEquipos.EquipoServiceClient();
+                ServicioEquipos.EquipoServiceClient proxy = new ServicioEquipos.EquipoServiceClient();
 
-            ServicioEquipos.Equipos equipo = proxy.ObtenerEquipos(str_equipo);
+                ServicioEquipos.Equipos equipo = proxy.ObtenerEquipos(str_equipo);
 
 
-            lblCodigox.Text = Convert.ToString(equipo.Id);
-            lblNombrex.Text = Convert.ToString(equipo.Tipo);
-            lblDescripcionx.Text = Convert.ToString(equipo.Descripcion);
-            lblMarcax.Text = Convert.ToString(equipo.Modelo);
-            lblAreax.Text = Convert.ToString(equipo.Area);
-            lblFechax.Text = Convert.ToString(equipo.FechaReg);
-            lblEstadox.Text = Convert.ToString(equipo.Estado);
+                lblCodigox.Text = Convert.ToString(equipo.Id);
+                lblNombrex.Text = Convert.ToString(equipo.Tipo);
+                lblDescripcionx.Text = Convert.ToString(equipo.Descripcion);
+                lblMarcax.Text = Convert.ToString(equipo.Modelo);
+                lblAreax.Text = Convert.ToString(equipo.Area);
+                lblFechax.Text = Convert.ToString(equipo.FechaReg);
+                lblEstadox.Text = Convert.ToString(equipo.Estado);
 
-            proxy = null;
+                proxy = null;
+            }
+            catch
+            {
+                Response.Write("<script language=javascript>alert('Se ha producido un grave error');</script>");
+            }
         }
 
         protected void btnSalir_Click(object sender, EventArgs e)

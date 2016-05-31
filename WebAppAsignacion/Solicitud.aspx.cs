@@ -17,13 +17,20 @@ namespace WebAppAsignacion
 
         void listarColaboradorXPendiente()
         {
-            ServicioColaborador.ColaboradorServiceClient proxy = new ServicioColaborador.ColaboradorServiceClient();
+            try
+            {
+                ServicioColaborador.ColaboradorServiceClient proxy = new ServicioColaborador.ColaboradorServiceClient();
 
-            gvColaborador.DataSource = proxy.ListarColaboradorXPendiente();
+                gvColaborador.DataSource = proxy.ListarColaboradorXPendiente();
 
-            gvColaborador.DataBind();
+                gvColaborador.DataBind();
 
-            proxy = null;
+                proxy = null;
+            }
+            catch 
+            {
+                Response.Write("<script language=javascript>alert('Se ha producido un grave error');</script>");
+            }
         }
 
         void verificarColaboradorKey()
@@ -33,12 +40,19 @@ namespace WebAppAsignacion
 
             if (str_colaborador != null)
             {
-                ServicioColaborador.ColaboradorServiceClient proxy = new ServicioColaborador.ColaboradorServiceClient();
-                ServicioColaborador.Colaborador colaborador= proxy.ObtenerColaborador(Convert.ToInt32(str_colaborador));
-                registrarSolicitud(colaborador);
-                actualizarColaborador(colaborador);
-                colaborador = null;
-                str_colaborador = null;
+                try
+                {
+                    ServicioColaborador.ColaboradorServiceClient proxy = new ServicioColaborador.ColaboradorServiceClient();
+                    ServicioColaborador.Colaborador colaborador = proxy.ObtenerColaborador(Convert.ToInt32(str_colaborador));
+                    registrarSolicitud(colaborador);
+                    actualizarColaborador(colaborador);
+                    colaborador = null;
+                    str_colaborador = null;
+                }
+                catch
+                {
+                    Response.Write("<script language=javascript>alert('Se ha producido un grave error');</script>");
+                }
             }                        
         }
 

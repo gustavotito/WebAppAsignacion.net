@@ -17,13 +17,20 @@ namespace WebAppAsignacion
 
         void listarEquipos()
         {
-            ServicioEquipos.EquipoServiceClient proxy = new ServicioEquipos.EquipoServiceClient();
+            try
+            {
+                ServicioEquipos.EquipoServiceClient proxy = new ServicioEquipos.EquipoServiceClient();
 
-            gvEquipos.DataSource = proxy.ListarEquipos();
+                gvEquipos.DataSource = proxy.ListarEquipos();
 
-            gvEquipos.DataBind();
+                gvEquipos.DataBind();
 
-            proxy = null;
+                proxy = null;
+            }
+            catch
+            {
+                Response.Write("<script language=javascript>alert('Se ha producido un grave error');</script>");
+            }
         }
 
         protected void Paginar(object sender, GridViewPageEventArgs e)
